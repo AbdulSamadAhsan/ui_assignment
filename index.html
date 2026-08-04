@@ -1,125 +1,107 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fintech Landing Page</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Responsive fintech landing page" />
+  <title>Fintech — Landing Page</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
+  <header class="site-header container">
+    <a class="brand" href="#" aria-label="Fintech home">Fintech<span>.</span></a>
 
-    <header>
-        <div class="container navbar">
-            <div class="logo">
-                Fintech<span>.</span>
-            </div>
+    <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
 
-            <nav>
-                <a href="#">Platform</a>
-                <a href="#">Company</a>
-                <a href="#">Industries</a>
-                <a href="#">Resources</a>
-            </nav>
+    <nav class="nav" aria-label="Main navigation">
+      <a href="#">Platform</a>
+      <a href="#">Company</a>
+      <a href="#">Industries</a>
+      <a href="#">Resources</a>
+    </nav>
 
-            <div class="buttons">
-                <button class="signin">SIGN IN</button>
-                <button class="signup">SIGN UP</button>
-            </div>
-        </div>
-    </header>
+    <div class="auth-actions">
+      <a class="btn btn-outline" href="#">Sign in</a>
+      <a class="btn btn-dark" href="#">Sign up</a>
+    </div>
+  </header>
 
+  <main>
     <section class="hero">
-        <div class="container hero-content">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <h1>All banks are<br>worried about<br>fintech ind.</h1>
+          <span class="decor-dot dot-top"></span>
 
-            <div class="left">
+          <p>We help you get paid any way you want, with the least amount of hassle. It’s just one of the reasons we are the most trusted name.</p>
 
-                <h1>
-                    All banks are <br>
-                    worried about <br>
-                    fintech ind.
-                </h1>
+          <form class="email-form" action="#" onsubmit="return false;">
+            <label class="sr-only" for="email">Business email</label>
+            <input id="email" type="email" placeholder="Business email" />
+            <button type="submit">Get started</button>
+          </form>
 
-                <p>
-                    We help you get paid any way you want, with the least amount
-                    of hassle. It's just one of the reasons we are the most trusted name.
-                </p>
-
-                <div class="email-box">
-                    <input type="email" placeholder="Business email">
-                    <button>Get started</button>
-                </div>
-
-                <div class="stats">
-
-                    <div class="card">
-                        <div class="icon">💼</div>
-                        <h3>$22k</h3>
-                        <span>Total Earning</span>
-                    </div>
-
-                    <div class="card">
-                        <div class="icon">💰</div>
-                        <h3>$10k</h3>
-                        <span>Withdraw</span>
-                    </div>
-
-                    <div class="card">
-                        <div class="icon">✔</div>
-                        <h3>15</h3>
-                        <span>Total Projects</span>
-                    </div>
-
-                </div>
-
-            </div>
-
-            <div class="right">
-
-                <div class="yellow-circle"></div>
-
-                <img src="image.png" alt="Woman">
-
-            </div>
-
-        </div>
-    </section>
-
-    <section class="features">
-
-        <div class="container feature-box">
-
-            <div class="feature">
-                <div class="feature-icon">
-                    <i class="ri-bank-card-line"></i>
-                </div>
-
-                <h3>Improved collection<br>performance</h3>
-            </div>
-
-            <div class="feature">
-                <div class="feature-icon">
-                    <i class="ri-wallet-3-line"></i>
-                </div>
-
-                <h3>Convenient, local<br>payment options</h3>
-            </div>
-            <div class="feature">
-                <div class="feature-icon">
-                    <i class="ri-exchange-dollar-line"></i>
-                </div>
-
-                <h3>The best price<br>guarantee</h3>
-            </div>
-
+          <div class="stats" aria-label="Business statistics">
+            <article class="stat-card">
+              <div class="stat-icon">▣</div>
+              <div><small>Total earning</small><strong>$22k</strong><span>+10.80%</span></div>
+            </article>
+            <article class="stat-card">
+              <div class="stat-icon">▢</div>
+              <div><small>Withdraw</small><strong>$10k</strong><span>+5.80%</span></div>
+            </article>
+            <article class="stat-card">
+              <div class="stat-icon">✓</div>
+              <div><small>Total Projects</small><strong>15</strong><span>+10.80%</span></div>
+            </article>
+          </div>
         </div>
 
+        <div class="hero-visual" aria-label="Smiling fintech representative">
+          <div class="yellow-shape"></div>
+          <img src="assets/hero-person.jpg" alt="Smiling fintech representative with folded arms" />
+          <div class="bubble bubble-a"></div>
+          <div class="bubble bubble-b"></div>
+        </div>
+      </div>
     </section>
 
+    <section class="benefits">
+      <div class="container benefits-grid">
+        <article class="benefit">
+          <div class="benefit-icon card-icon" aria-hidden="true">
+            <span class="accent green"></span>
+            <span class="card-body"></span>
+            <span class="card-line"></span>
+          </div>
+          <h2>Improve collection<br>performance</h2>
+        </article>
+
+        <article class="benefit">
+          <div class="benefit-icon wallet-icon" aria-hidden="true">
+            <span class="accent yellow"></span>
+            <span class="wallet-body"></span>
+            <span class="wallet-dot"></span>
+          </div>
+          <h2>Convenient, local<br>payment options</h2>
+        </article>
+
+        <article class="benefit">
+          <div class="benefit-icon price-icon" aria-hidden="true">
+            <span class="coin coin-euro">€</span>
+            <span class="coin coin-dollar">$</span>
+          </div>
+          <h2>The best price<br>guarantee</h2>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
 </body>
-
 </html>
